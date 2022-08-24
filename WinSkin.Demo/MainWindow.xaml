@@ -1,11 +1,11 @@
-﻿<winskin:WinSkinWindow
+﻿<WinSkin:WinSkinWindow
     x:Class="WinSkin.Demo.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:WinSkin="clr-namespace:WinSkin;assembly=WinSkin"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WinSkin.Demo"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:winskin="clr-namespace:WinSkin;assembly=WinSkin"
     Title="MainWindow"
     Width="800"
     Height="450"
@@ -24,6 +24,25 @@
             <Setter Property="FontSize" Value="16" />
         </Style>
     </Window.Resources>
+
+    <!--  左侧标题区域  -->
+    <WinSkin:WinSkinWindow.TitleContent>
+        <Grid Background="Green">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="#666666"
+                    Text="Powered by D" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="#666666"
+                    Text="Skin" />
+            </StackPanel>
+        </Grid>
+    </WinSkin:WinSkinWindow.TitleContent>
 
     <Grid>
         <TextBlock
@@ -48,4 +67,4 @@
             Text="测试文本" />
     </Grid>
 
-</winskin:WinSkinWindow>
+</WinSkin:WinSkinWindow>
