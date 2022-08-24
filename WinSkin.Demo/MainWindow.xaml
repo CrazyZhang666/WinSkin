@@ -19,6 +19,33 @@
     SystemButtonSize="32"
     mc:Ignorable="d">
 
-    <Grid />
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <TextBlock
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="测试文本" />
+        <TextBlock
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Text="测试文本" />
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="测试文本" />
+        <TextBlock
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Text="测试文本" />
+        <TextBlock
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Text="测试文本" />
+    </Grid>
 
 </winskin:WinSkinWindow>
