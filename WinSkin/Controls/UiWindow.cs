@@ -1,9 +1,9 @@
-﻿namespace WinSkin;
+﻿namespace WinSkin.Controls;
 
-public class WinSkinWindow : Window
+public class UiWindow : Window
 {
     #region 初始化
-    public WinSkinWindow()
+    public UiWindow()
     {
         var chrome = new WindowChrome
         {
@@ -11,8 +11,6 @@ public class WinSkinWindow : Window
             ResizeBorderThickness = new Thickness(4)
         };
         WindowChrome.SetWindowChrome(this, chrome);
-
-        this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
         // 将标题栏高度绑定给Chrome
         BindingOperations.SetBinding(chrome, WindowChrome.CaptionHeightProperty,
@@ -52,7 +50,7 @@ public class WinSkinWindow : Window
         set { SetValue(SystemButtonColorProperty, value); }
     }
     public static readonly DependencyProperty SystemButtonColorProperty =
-        DependencyProperty.Register("SystemButtonColor", typeof(Brush), typeof(WinSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0, 255, 255, 255))));
+        DependencyProperty.Register("SystemButtonColor", typeof(Brush), typeof(UiWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0, 255, 255, 255))));
 
     /// <summary>
     /// 系统按钮大小
@@ -63,7 +61,8 @@ public class WinSkinWindow : Window
         set { SetValue(SystemButtonSizeProperty, value); }
     }
     public static readonly DependencyProperty SystemButtonSizeProperty =
-        DependencyProperty.Register("SystemButtonSize", typeof(double), typeof(WinSkinWindow), new PropertyMetadata(30.0));
+        DependencyProperty.Register("SystemButtonSize", typeof(double), typeof(UiWindow), new PropertyMetadata(30.0));
+
     /// <summary>
     /// 系统按钮前景色
     /// </summary>
@@ -73,7 +72,7 @@ public class WinSkinWindow : Window
         set { SetValue(SystemButtonForegroundProperty, value); }
     }
     public static readonly DependencyProperty SystemButtonForegroundProperty =
-        DependencyProperty.Register("SystemButtonForeground", typeof(Brush), typeof(WinSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(88, 88, 88))));
+        DependencyProperty.Register("SystemButtonForeground", typeof(Brush), typeof(UiWindow), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(88, 88, 88))));
 
     /// <summary>
     /// 系统按钮悬浮背景色
@@ -84,7 +83,7 @@ public class WinSkinWindow : Window
         set { SetValue(SystemButtonOverColorProperty, value); }
     }
     public static readonly DependencyProperty SystemButtonOverColorProperty =
-        DependencyProperty.Register("SystemButtonOverColor", typeof(Brush), typeof(WinSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(40, 255, 255, 255))));
+        DependencyProperty.Register("SystemButtonOverColor", typeof(Brush), typeof(UiWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(40, 255, 255, 255))));
 
     /// <summary>
     /// 关闭按钮悬浮背景色
@@ -95,7 +94,7 @@ public class WinSkinWindow : Window
         set { SetValue(SystemButtonCloseOverColorProperty, value); }
     }
     public static readonly DependencyProperty SystemButtonCloseOverColorProperty =
-        DependencyProperty.Register("SystemButtonCloseOverColor", typeof(Brush), typeof(WinSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 0, 0))));
+        DependencyProperty.Register("SystemButtonCloseOverColor", typeof(Brush), typeof(UiWindow), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 0, 0))));
     #endregion
 
     #region 窗口属性
@@ -108,7 +107,7 @@ public class WinSkinWindow : Window
         set { SetValue(CaptionHeightProperty, value); }
     }
     public static readonly DependencyProperty CaptionHeightProperty =
-        DependencyProperty.Register("CaptionHeight", typeof(double), typeof(WinSkinWindow), new PropertyMetadata(30.0));
+        DependencyProperty.Register("CaptionHeight", typeof(double), typeof(UiWindow), new PropertyMetadata(30.0));
 
     /// <summary>
     /// 标题栏背景色
@@ -119,7 +118,7 @@ public class WinSkinWindow : Window
         set { SetValue(CaptionBackgroundProperty, value); }
     }
     public static readonly DependencyProperty CaptionBackgroundProperty =
-        DependencyProperty.Register("CaptionBackground", typeof(Brush), typeof(WinSkinWindow), new PropertyMetadata(default));
+        DependencyProperty.Register("CaptionBackground", typeof(Brush), typeof(UiWindow), new PropertyMetadata(default));
 
     /// <summary>
     /// 标题栏的内容
@@ -130,7 +129,7 @@ public class WinSkinWindow : Window
         set { SetValue(TitleContentProperty, value); }
     }
     public static readonly DependencyProperty TitleContentProperty =
-        DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(WinSkinWindow), new PropertyMetadata(default));
+        DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(UiWindow), new PropertyMetadata(default));
 
     /// <summary>
     /// 沉浸式标题栏
@@ -141,6 +140,6 @@ public class WinSkinWindow : Window
         set { SetValue(FitSystemWindowProperty, value); }
     }
     public static readonly DependencyProperty FitSystemWindowProperty =
-        DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(WinSkinWindow), new PropertyMetadata(default));
+        DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(UiWindow), new PropertyMetadata(default));
     #endregion
 }

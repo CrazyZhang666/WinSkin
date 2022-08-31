@@ -1,4 +1,4 @@
-﻿namespace WinSkin.Attached;
+﻿namespace WinSkin.Controls.Attach;
 
 /// <summary>
 /// 附加属性 圆角值

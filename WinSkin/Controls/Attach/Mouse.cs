@@ -1,4 +1,4 @@
-﻿namespace WinSkin.Attached;
+﻿namespace WinSkin.Controls.Attach;
 
 /// <summary>
 /// 鼠标的附加属性
